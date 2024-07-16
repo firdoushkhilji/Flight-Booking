@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    font-family: Lato;
+    background-color: #333;
+    background-image: url('image.png..jpeg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: 100% auto;
+    }
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 1); 
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+
+
+ .logo img {
+    width: 300px; 
+    height: 80px; 
+    border-radius: 1%; 
+    padding-left: 100px;
+  }
+  
+
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 10px;
+  }
+  
+  .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: #004b9a;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  
+  .nav-links li a:hover {
+    background-color: rgb(121, 157, 236);
+  }
+
+  .container {
+    margin-top: 80px; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+  
+    
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+  }
+  
+  .card {
+    flex: 1 1 calc(20% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  
+  .card input[type="date"],
+  .card .travellers-class-picker {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: none;
+  }
+  
+  .card .travellers-class-picker label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .card .travellers-class-picker input,
+  .card .travellers-class-picker select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .card h2::after {
+    content: '\25BC'; 
+    font-size: 0.8rem;
+    margin-left: 5px;
+    color: #007bff; 
+  }
+  
+  .card:last-child {
+    margin-right: 0;
+  }
+  
+  .search-button {
+    position: absolute;
+    bottom: -25px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; 
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff; 
+    background-image: linear-gradient(to right, #00bfff, #0056b3); 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      margin-top: 50px; 
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      margin: 10px 0;
+      width: 100%;
+    }
+  
+    .search-button {
+      width: 90%;
+    }
+  
+    .menu-toggle {
+      display: block; 
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+  
+    .menu-toggle ul {
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.7); 
+      padding: 10px;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 150px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      opacity: 0; 
+      pointer-events: none; 
+      transition: opacity 0.3s ease-in-out;
+    }
+  
+    .menu-toggle ul.open {
+      opacity: 1; 
+      pointer-events: auto;
+    }
+  
+    .menu-toggle ul li {
+      margin-bottom: 10px;
+    }
+  
+    .menu-toggle ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+  }
+  
